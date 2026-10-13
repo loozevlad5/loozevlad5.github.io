@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Великие" озера — Наши путешествия</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Leaflet: карта -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <header class="header">
+        <a href="../index.html" class="logo">Наши путешествия</a>
+        <nav class="nav">
+            <a href="../gallery.html">Места</a>
+            <a href="../stories.html">Истории</a>
+            <a href="../about.html">О нас</a>
+        </nav>
+    </header>
+
+    <section class="page place-detail">
+
+        <a href="../gallery.html" class="back-link">← Ко всем местам</a>
+
+        <h1>"Великие" озера</h1>
+        <p class="place-subtitle">Поездка на снегоходе до озера · 2026</p>
+
+        <!-- ===== КАРТА ===== -->
+        <div id="map"></div>
+
+        <!-- ===== ВВОДНЫЙ ТЕКСТ ===== -->
+        <div class="place-text">
+            <p>Базовая поездка на снегоходе, чтобы поморозить яйца впервые не в плюсовую температуру, сделать шашлыки и повзрывать балоны с газом</p>
+        </div>
+
+        <!-- ===== ФОТО ===== -->
+        <h2>Фотографии и видео</h2>
+<div class="gallery-grid">
+
+    <img src="../images/lake-1.jpg" alt="Озеро 1">
+
+    <video controls playsinline preload="metadata" poster="../images/lake-1-poster.jpg">
+        <source src="../videos/lake-video-1.mp4" type="video/mp4">
+        Твой браузер не поддерживает видео.
+    </video>
+
+    <img src="../images/lake-2.jpg" alt="Озеро 2">
+
+    <video controls playsinline preload="metadata" poster="../images/lake-2-poster.jpg">
+        <source src="../videos/lake-video-2.mp4" type="video/mp4">
+        Твой браузер не поддерживает видео.
+    </video>
+
+</div>
+
+        <!-- ===== ТЕКСТ ПОСЛЕ ФОТО ===== -->
+        <h2>Как это было</h2>
+        <div class="place-text">
+            <p>Бесили Артемку до 4 утра, хотя вставать надо было в 8. Вроде как кто то даже провалился</p>
+            
+        </div>
+
+        <!-- ===== ЕЩЁ ФОТО ===== -->
+        <!-- ===== ЕЩЁ ФОТО И ВИДЕО ===== -->
+<div class="gallery-grid">
+
+    <video controls playsinline preload="metadata" poster="../images/lake-7-poster.jpg">
+        <source src="../videos/lake-video-3.mp4" type="video/mp4">
+        Твой браузер не поддерживает видео.
+    </video>
+
+    <img src="../images/lake-5.jpg" alt="Озеро 5">
+    <img src="../images/lake-6.jpg" alt="Озеро 6">
+    <img src="../images/lake-8.jpg" alt="Озеро 8">
+
+</div>
+
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Наши путешествия</p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Скрипт карты -->
+    <script>
+        // Центр — координаты озёр
+        const center = [59.299148, 31.924936];
+
+        // Создаём карту
+        const map = L.map('map').setView(center, 12);
+
+        // Подключаем слой OpenStreetMap (бесплатный)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Маркер на точке
+        L.marker(center).addTo(map)
+            .bindPopup('"Великие" озера')
+            .openPopup();
+
+        // Ограничиваем зону, куда можно двигать карту (чтобы не улететь в океан)
+        const bounds = L.latLngBounds(
+            [59.15, 31.60], // юго-запад
+            [59.45, 32.30]  // северо-восток
+        );
+        map.setMaxBounds(bounds);
+        map.setMinZoom(10);
+        map.setMaxZoom(17);
+    </script>
+
+</body>
+</html>

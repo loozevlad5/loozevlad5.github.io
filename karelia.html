@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карелия — Наши путешествия</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <header class="header">
+        <a href="../index.html" class="logo">Наши путешествия</a>
+        <nav class="nav">
+            <a href="../gallery.html">Места</a>
+            <a href="../stories.html">Истории</a>
+            <a href="../about.html">О нас</a>
+        </nav>
+    </header>
+
+    <section class="page place-detail">
+
+        <a href="../gallery.html" class="back-link">← Ко всем местам</a>
+
+        <h1>Карелия</h1>
+        <p class="place-subtitle">Поездка на майские праздники · 2026</p>
+
+        <div class="place-text">
+            <p>Встретились в Волхове и поехали дальше по точкам</p>
+        </div>
+
+        <!-- ===== 1. ЛОДЕЙНОЕ ПОЛЕ ===== -->
+        <div class="route-point">
+            <h2>1. Лодейное Поле</h2>
+            <p class="route-coords">60.712618, 33.560716</p>
+            <div id="map-lodeynoe" class="map-small"></div>
+            <div class="place-text">
+                <p>Ебануто высокой недострой в лесу с максимально стремной лестницей. В заброшенном аэродроме из интересного были только огромные ангары.</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="../images/karelia-lodeynoe-1.jpg" alt="Лодейное Поле 1">
+
+                <video controls playsinline preload="metadata">
+                    <source src="../videos/karelia-lodeynoe.mp4" type="video/mp4">
+                    Твой браузер не поддерживает видео.
+                </video>
+
+                <img src="../images/karelia-lodeynoe-2.jpg" alt="Лодейное Поле 2">
+                <img src="../images/karelia-lodeynoe-3.jpg" alt="Лодейное Поле 3">
+                <img src="../images/karelia-lodeynoe-4.jpg" alt="Лодейное Поле 4">
+                <img src="../images/karelia-lodeynoe-5.jpg" alt="Лодейное Поле 5">
+                <img src="../images/karelia-lodeynoe-6.jpg" alt="Лодейное Поле 6">
+            </div>
+        </div>
+
+        <!-- ===== 2. НОЧЁВКА ===== -->
+        <div class="route-point">
+            <h2>2. Ночёвка</h2>
+            <p class="route-coords">62.098383, 34.259345</p>
+            <div id="map-nochevka" class="map-small"></div>
+            <div class="place-text">
+                <p>Ночевали чисто в гастарбайтерском вагончике за 3к в сутки, но хотя бы неплохой двор был с озером</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="../images/karelia-nochevka-1.jpg" alt="Ночёвка 1">
+                <video controls playsinline preload="metadata">
+                    <source src="../videos/karelia-nochevka.mp4" type="video/mp4">
+                    Твой браузер не поддерживает видео.
+                </video>
+        </div>
+
+        <!-- ===== 3. ГОРА САМПО ===== -->
+        <div class="route-point">
+            <h2>3. Гора Сампо</h2>
+            <p class="route-coords">62.038988, 34.096801</p>
+            <div id="map-sampo" class="map-small"></div>
+            <div class="place-text">
+                <p>Просто туристическая помойка. Прям чего то мега интересного не было</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="../images/karelia-sampo-1.jpg" alt="Гора Сампо 1">
+                <img src="../images/karelia-sampo-2.jpg" alt="Гора Сампо 2">
+
+                <video controls playsinline preload="metadata">
+                    <source src="../videos/karelia-sampo.mp4" type="video/mp4">
+                    Твой браузер не поддерживает видео.
+                </video>
+            </div>
+        </div>
+
+        <!-- ===== 4. ГИРВАССКИЙ РАЗРЕЗ ===== -->
+        <div class="route-point">
+            <h2>4. Гирвасский разрез</h2>
+            <p class="route-coords">62.456708, 33.669927</p>
+            <div id="map-girvas" class="map-small"></div>
+            <div class="place-text">
+                <p>Прикольные скалы</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="../images/karelia-girvas-1.jpg" alt="Гирвас 1">
+                <img src="../images/karelia-girvas-2.jpg" alt="Гирвас 2">
+                <img src="../images/karelia-girvas-3.jpg" alt="Гирвас 3">
+                <img src="../images/karelia-girvas-4.jpg" alt="Гирвас 4">
+                <img src="../images/karelia-girvas-5.jpg" alt="Гирвас 5">
+                <img src="../images/karelia-girvas-6.jpg" alt="Гирвас 6">
+                <img src="../images/karelia-girvas-7.jpg" alt="Гирвас 7">
+                <img src="../images/karelia-girvas-8.jpg" alt="Гирвас 8">
+            </div>
+        </div>
+
+        <!-- ===== 5. МРАМОРНАЯ ГОРА ===== -->
+        <div class="route-point">
+            <h2>5. Мраморная гора</h2>
+            <p class="route-coords">62.580082, 33.957431</p>
+            <div id="map-mramor" class="map-small"></div>
+            <div class="place-text">
+                <p>Из-за того, что поздно приехали не смогли попасть на сам мрамор и еще потому что не взяли с собой надувной матрас дырявый</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="../images/karelia-mramor-1.jpg" alt="Мраморная гора 1">
+                <img src="../images/karelia-mramor-2.jpg" alt="Мраморная гора 2">
+                <img src="../images/karelia-mramor-3.jpg" alt="Мраморная гора 3">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Наши путешествия</p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        function createMap(id, coords, title) {
+            const map = L.map(id, {
+                scrollWheelZoom: false
+            }).setView(coords, 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            L.marker(coords).addTo(map)
+                .bindPopup(title)
+                .openPopup();
+
+            const bounds = L.latLngBounds(
+                [coords[0] - 0.08, coords[1] - 0.15],
+                [coords[0] + 0.08, coords[1] + 0.15]
+            );
+            map.setMaxBounds(bounds);
+            map.setMinZoom(10);
+            map.setMaxZoom(17);
+
+            map.on('click', () => map.scrollWheelZoom.enable());
+            map.on('mouseout', () => map.scrollWheelZoom.disable());
+        }
+
+        createMap('map-lodeynoe', [60.712618, 33.560716], 'Лодейное Поле');
+        createMap('map-nochevka', [62.098383, 34.259345], 'Ночёвка');
+        createMap('map-sampo',    [62.038988, 34.096801], 'Гора Сампо');
+        createMap('map-girvas',   [62.456708, 33.669927], 'Гирвасский разрез');
+        createMap('map-mramor',   [62.580082, 33.957431], 'Мраморная гора');
+    </script>
+
+</body>
+</html>
